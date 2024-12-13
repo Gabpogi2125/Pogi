@@ -1,0 +1,14 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Wait for the Humanoid to load
+local humanoid = character:WaitForChild("Humanoid")
+
+-- Set your desired speed (default speed is 16)
+local fastSpeed = 50
+
+-- Change WalkSpeed
+humanoid.WalkSpeed = fastSpeed
+
+-- Optional: Output message for confirmation
+print("Your WalkSpeed is now set to " .. fastSpeed)
